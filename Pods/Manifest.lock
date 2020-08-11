@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.9.0)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - KeychainAccess (3.2.1)
+  - ObjectMapper (3.5.3)
+  - Starscream (4.0.0)
+  - SwiftyJSON (4.3.0)
+  - WebexBroadcastExtensionKit (2.5.0)
+  - WebexSDK (2.5.0):
+    - Alamofire (= 4.9.0)
+    - AlamofireObjectMapper (~> 5.1)
+    - KeychainAccess (~> 3.1)
+    - ObjectMapper (~> 3.3)
+    - Starscream (= 4.0.0)
+    - SwiftyJSON (~> 4.1)
+
+DEPENDENCIES:
+  - WebexBroadcastExtensionKit
+  - WebexSDK
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireObjectMapper
+    - KeychainAccess
+    - ObjectMapper
+    - Starscream
+    - SwiftyJSON
+    - WebexBroadcastExtensionKit
+    - WebexSDK
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  KeychainAccess: d5470352939ced6d6f7fb51cb2e67aae51fc294f
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  Starscream: 04b26f02727e10a002e6b5d21b188ba0d049910b
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  WebexBroadcastExtensionKit: fc8e359d30a72e0a5ec5bcb0a2481ea9495c7010
+  WebexSDK: 8fa43657684bb1968134ab4f6b592ecf4a7c5ab5
+
+PODFILE CHECKSUM: 4827388d56de7346517173162f479fd09223453d
+
+COCOAPODS: 1.9.3
