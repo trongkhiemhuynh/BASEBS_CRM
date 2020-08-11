@@ -18,31 +18,13 @@ class LoginViewController : UIViewController {
 
     @IBAction func loginAction(_ sender : AnyObject) {
         
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "SplashViewID")
-//
-//        present(vc, animated: false) {
-//            print("xxx")
-//        }
-        
-        let clientId = "Cc7295dda94de7fc44826cc096e448b50520a93cf1f8ec98c5384715641a6c9ca"
-        let clientSecret = "4cafb64a4a956c84f7a787bfb74031ce89a7937fd82297ac860d9534d4447292"
-        let scope = "spark:all"
-        let redirectUri = "Basedemo://response"
-        
-        let authenticator = OAuthAuthenticator(clientId: clientId, clientSecret: clientSecret, scope: scope, redirectUri: redirectUri)
-        
-        let webex = Webex(authenticator: authenticator)
-        
-    
-        if !authenticator.authorized {
-            authenticator.authorize(parentViewController: self) { success in
-                if !success {
-                    print("User not authorized")
-                }
-            }
+        let router = Router<BaseApi>()
+        router.request(<#T##route: BaseApi##BaseApi#>, completion: <#T##(Data?, URLResponse?, Error?) -> Void#>)
+        router.request(.login(username: "khiemht@base.com", password: "Admin@1234")) { (data, response, error) in
+            print("-------------")
+            
+            print(data)
         }
-        
         
     }
 

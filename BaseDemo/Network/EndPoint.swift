@@ -29,3 +29,38 @@ public enum HTTPTask {
 
 public typealias HTTPHeaders = [String:String]
 public typealias Parameters = [String : Any]
+
+enum BaseApi {
+    case register(username:String, email:String, hashedPassword:String)
+    case login(username:String, password:String)
+}
+
+extension BaseApi : EndPointType {
+    var baseURL: URL {
+        guard let url = URL(string: path) else { fatalError("API can not be configured")}
+        
+        return url
+        
+    }
+    
+    var path: String {
+        switch NetworkManager.environment {
+        case .production: return "https://google.com"
+        case .stagging: return ""
+        case .qa: return ""
+        }
+    }
+    
+    var httpMethod: HTTPMethod {
+        return .get
+    }
+    
+    var task: HTTPTask {
+        return .request
+    }
+    
+    var headers: HTTPHeaders? {
+        return nil
+    }
+
+}
